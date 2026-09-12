@@ -5,7 +5,7 @@
       "name": "aidlc-session-start",
       "trigger": "SessionStart",
       "description": "Starts an AIDLC session: notes the session opened and gives the assistant the current workflow context.",
-      "action": { "type": "command", "command": "aidlc engine adapter kiro-ide session-start" }
+      "action": { "type": "command", "command": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Users\\User\\AppData\\Local\\aidlc\\aidlc-shim.ps1\" engine adapter kiro-ide session-start" }
     }
   ]
 }

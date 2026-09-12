@@ -5,7 +5,7 @@
       "name": "aidlc-record-human-turn",
       "trigger": "UserPromptSubmit",
       "description": "Notes that a real person typed something this turn, which is what lets approval gates tell a human response from the assistant continuing on its own.",
-      "action": { "type": "command", "command": "aidlc engine adapter kiro-ide record-human-turn" }
+      "action": { "type": "command", "command": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Users\\User\\AppData\\Local\\aidlc\\aidlc-shim.ps1\" engine adapter kiro-ide record-human-turn" }
     }
   ]
 }
