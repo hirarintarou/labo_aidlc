@@ -1,0 +1,19 @@
+{
+  "stage": "domain-design",
+  "upstream_ids": [
+    "US0.1", "US1.1", "US1.2", "US1.3", "US1.4", "US1.5", "US1.6", "US1.7", "US1.8", "US1.9", "US2.1"
+  ],
+  "coverage": [
+    { "id": "US0.1", "status": "OK", "target": "ImageIO, ImageProcessingCore, AppUI" },
+    { "id": "US1.1", "status": "OK", "target": "AppUI, ImageIO" },
+    { "id": "US1.2", "status": "OK", "target": "ImageProcessingCore" },
+    { "id": "US1.3", "status": "OK", "target": "ImageProcessingCore" },
+    { "id": "US1.4", "status": "OK", "target": "ImageProcessingCore" },
+    { "id": "US1.5", "status": "OK", "target": "ImageProcessingCore" },
+    { "id": "US1.6", "status": "OK", "target": "ImageProcessingCore" },
+    { "id": "US1.7", "status": "OK", "target": "ImageIO" },
+    { "id": "US1.8", "status": "OK", "target": "AppUI, ImageProcessingCore" },
+    { "id": "US1.9", "status": "Deferred", "target": "delivery-planning" },
+    { "id": "US2.1", "status": "OK", "target": "BatchProcessor" }
+  ]
+}
