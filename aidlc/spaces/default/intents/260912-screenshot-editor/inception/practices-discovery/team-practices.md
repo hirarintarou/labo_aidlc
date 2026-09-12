@@ -1,9 +1,9 @@
-# Team-Level Rules
+# Team Practices
 
-> This team's affirmed practices and corrections. Loaded after `org.md` as
-> strict-additive guidance; contradictions with broader policy are rejected.
-> Populated by the practices-discovery affirmation gate. Edit at the gate,
-> not directly.
+> 本プロジェクトは個人開発（開発者=利用者=本人、1人）・Windows 専用・ローカル完結の
+> 小規模ツールである。以下は `org.md` の既定プラクティスを個人・ローカル完結・mvp
+> スコープに合わせて調整し、インタビュー（Q1〜Q8）と 3 つのサポートレビュー
+> （quality / developer / devsecops）を統合して確定したものである。
 
 ## Way of Working
 
@@ -54,10 +54,6 @@
   Python は pytest＋pytest-cov、JS/TS は Vitest/Jest＋c8/nyc）。確定時に
   プロジェクト設定へ記録する。
 
-## Change Control
-
-<!-- Affirmed by the team. Mode: strict or relaxed. Strict here holds for every intent and cannot be changed from chat. -->
-
 ## Deployment
 
 - 「ステージング/本番パイプライン」ではなく、**ローカルビルド/インストール** を
@@ -92,14 +88,13 @@
   ではなく、日本語で理由が分かるメッセージに変換する（例:「このファイルは開けません
   でした（対応形式は PNG / JPEG です）」）。1 枚の失敗でツールを落とさない。
 
-## Forbidden
+## Assumptions & Open Questions
 
-<!-- Team-specific forbidden patterns -->
-
-## Mandated
-
-<!-- Team-specific mandates -->
-
-## Corrections
-
-<!-- Self-learning loop appends here. -->
+- 技術スタック（言語・GUI フレームワーク・画像処理ライブラリ）が未確定のため、
+  テストランナー・カバレッジツール・フォーマッタ・リンタ・pre-commit/pre-push
+  フックの具体名はスタック確定後に記録する。
+- JPEG ラウンドトリップの許容誤差基準（非可逆のため画素完全一致は不可能）を
+  スタック確定時に定める。
+- 非破壊保存の既定の出力先・命名規則（サフィックス等）は後続ステージで確定する。
+- プロパティベーステスト（PNG round-trip 恒等・リサイズ後寸法一致など）を標準
+  ツールセットに含めるかは、solo の労力対効果を見て判断する（推奨だが必須ではない）。
