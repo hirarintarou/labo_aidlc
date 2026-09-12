@@ -5,7 +5,7 @@
       "name": "aidlc-terminal-command",
       "trigger": "UserPromptSubmit",
       "description": "Runs deterministic AIDLC utility commands before the model when this IDE generation exposes the submitted prompt.",
-      "action": { "type": "command", "command": "aidlc engine adapter kiro-ide verb-intercept" }
+      "action": { "type": "command", "command": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Users\\User\\AppData\\Local\\aidlc\\aidlc-shim.ps1\" engine adapter kiro-ide verb-intercept" }
     }
   ]
 }
