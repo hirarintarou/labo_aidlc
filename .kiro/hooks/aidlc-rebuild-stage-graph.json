@@ -6,7 +6,7 @@
       "trigger": "PostToolUse",
       "matcher": "execute_bash|execute_pwsh|shell",
       "description": "Rebuilds the compiled plan of remaining stages after the workflow moves, so routing decisions use current state.",
-      "action": { "type": "command", "command": "aidlc engine adapter kiro-ide rebuild-stage-graph" }
+      "action": { "type": "command", "command": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Users\\User\\AppData\\Local\\aidlc\\aidlc-shim.ps1\" engine adapter kiro-ide rebuild-stage-graph" }
     }
   ]
 }
