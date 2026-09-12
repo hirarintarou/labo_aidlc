@@ -5,7 +5,7 @@
       "name": "aidlc-plan-approval-guard",
       "trigger": "PreToolUse",
       "description": "Blocks Code Generation before a human-owned Plan Approval receipt, using exact tool targets when available and a source-floor fallback for legacy argument-less payloads.",
-      "action": { "type": "command", "command": "aidlc engine adapter kiro-ide plan-approval-guard" }
+      "action": { "type": "command", "command": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"C:\\Users\\User\\AppData\\Local\\aidlc\\aidlc-shim.ps1\" engine adapter kiro-ide plan-approval-guard" }
     }
   ]
 }
