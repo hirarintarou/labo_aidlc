@@ -5,5 +5,12 @@
     "dirName": "260912-screenshot-editor",
     "scope": "mvp",
     "status": "complete"
+  },
+  {
+    "uuid": "01a09b68-1ccd-7136-a751-90512063e9f9",
+    "slug": "preview-changed-error",
+    "dirName": "260913-preview-changed-error",
+    "scope": "bugfix",
+    "status": "in-flight"
   }
 ]

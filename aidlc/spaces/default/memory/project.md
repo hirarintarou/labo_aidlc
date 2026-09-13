@@ -102,3 +102,4 @@ API で安全にデコードする（独自パーサを書かない）。 (affir
 
 <!-- Project-specific corrections from human feedback. -->
 <!-- Format: NEVER/ALWAYS [behavior] (learned [date]) -->
+- ALWAYS 会話言語（人が読む成果物・レビュー・質問・エージェントの応答）を日本語とする。 (learned 2026-09-14) (learned 2026-09-13) <!-- cid:260913-preview-changed-error:reverse-engineering:083a39932d1f4700783cd9d5b950d10dd18003a28d1853d6ff6d9aff5fa31580 -->
