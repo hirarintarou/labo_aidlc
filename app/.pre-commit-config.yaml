@@ -1,0 +1,24 @@
+# ローカル品質ゲート（team.md の CI ゲート方針: リモート CI は必須とせず、
+# pre-commit / pre-push フックでテスト green ＋ カバレッジ下限をローカル強制する）。
+# いずれも uv run 経由で実行する。
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: black (format check)
+        entry: uv run black --check .
+        language: system
+        pass_filenames: false
+        types: [python]
+      - id: ruff
+        name: ruff (lint, security S rules)
+        entry: uv run ruff check .
+        language: system
+        pass_filenames: false
+        types: [python]
+      - id: pytest-cov
+        name: pytest + coverage (core/io >= 80%)
+        entry: uv run pytest tests/ --cov=screenshot_editor.core --cov=screenshot_editor.io --cov-report=term-missing --cov-fail-under=80
+        language: system
+        pass_filenames: false
+        stages: [pre-push]

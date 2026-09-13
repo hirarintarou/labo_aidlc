@@ -1,0 +1,15 @@
+{
+  "stage": "infrastructure-design",
+  "unit": "screenshot-editor",
+  "upstream_ids": ["PERF-4", "SEC-1", "SEC-4", "SEC-5", "NFR5"],
+  "coverage": [
+    { "id": "PERF-4", "status": "OK", "target": "infrastructure-specification: ローカル実行環境" },
+    { "id": "SEC-1", "status": "OK", "target": "monitoring-design: ローカルログ・外部送信なし" },
+    { "id": "SEC-4", "status": "OK", "target": "infrastructure-specification: 依存固定/PyInstaller同梱" },
+    { "id": "SEC-5", "status": "OK", "target": "cicd-pipeline: ruffセキュリティルール・secretスキャン" },
+    { "id": "NFR5", "status": "OK", "target": "cicd-pipeline: pytest+カバレッジ80%(core限定)をローカル強制" }
+  ],
+  "reverse": [
+    { "id": "cicd-build", "status": "N/A", "target": "PyInstallerビルドは特定NFRではなく配布手段" }
+  ]
+}
