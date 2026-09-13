@@ -1,0 +1,16 @@
+{
+  "stage": "nfr-requirements",
+  "unit": "screenshot-editor",
+  "upstream_ids": ["NFR1", "NFR2", "NFR3", "NFR4", "NFR5", "NFR6"],
+  "coverage": [
+    { "id": "NFR1", "status": "OK", "target": "SEC-2" },
+    { "id": "NFR2", "status": "OK", "target": "SEC-1, SEC-4" },
+    { "id": "NFR3", "status": "OK", "target": "SEC-3" },
+    { "id": "NFR4", "status": "Deferred", "target": "nfr-design" },
+    { "id": "NFR5", "status": "Deferred", "target": "nfr-design" },
+    { "id": "NFR6", "status": "OK", "target": "PERF-1, PERF-2, PERF-3, PERF-4" }
+  ],
+  "reverse": [
+    { "id": "SEC-5", "status": "N/A", "target": "supply-chain hardening beyond a specific NFR" }
+  ]
+}
