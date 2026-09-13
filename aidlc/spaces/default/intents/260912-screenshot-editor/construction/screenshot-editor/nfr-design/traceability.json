@@ -1,0 +1,16 @@
+{
+  "stage": "nfr-design",
+  "unit": "screenshot-editor",
+  "upstream_ids": ["PERF-1", "PERF-2", "PERF-3", "PERF-4", "SEC-1", "SEC-2", "SEC-3", "SEC-4", "SEC-5"],
+  "coverage": [
+    { "id": "PERF-1", "status": "OK", "target": "performance-design: プレビュー縮小適用" },
+    { "id": "PERF-2", "status": "OK", "target": "performance-design: 縮小版キャッシュ" },
+    { "id": "PERF-3", "status": "OK", "target": "performance-design: 1パス書き出し" },
+    { "id": "PERF-4", "status": "OK", "target": "performance-design: ワーカースレッド+進捗シグナル" },
+    { "id": "SEC-1", "status": "OK", "target": "security-design: ネットワークI/Oなし" },
+    { "id": "SEC-2", "status": "OK", "target": "security-design: 安全デコード+上限" },
+    { "id": "SEC-3", "status": "OK", "target": "security-design: アトミック非破壊保存+衝突回避" },
+    { "id": "SEC-4", "status": "OK", "target": "security-design: 依存固定+ロックファイル" },
+    { "id": "SEC-5", "status": "OK", "target": "security-design: ruffセキュリティルール" }
+  ]
+}
