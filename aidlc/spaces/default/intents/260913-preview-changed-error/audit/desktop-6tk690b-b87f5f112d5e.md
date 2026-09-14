@@ -876,3 +876,137 @@
 **Agent**: aidlc-pipeline-deploy-agent
 
 ---
+
+## Decision Recorded
+**Timestamp**: 2026-09-14T14:34:22Z
+**Event**: DECISION_RECORDED
+**Stage**: deployment-pipeline
+**Decision**: Does this all look correct before I generate the artifact?
+**Options**: Looks correct,Request changes
+**Checkpoint**: Consolidated Summary Confirmation
+**Questions File**: aidlc/spaces/default/intents/260913-preview-changed-error/operation/deployment-pipeline/deployment-pipeline-questions.md
+
+---
+
+## Human Turn
+**Timestamp**: 2026-09-14T14:35:57Z
+**Event**: HUMAN_TURN
+**Session**: sess_0142fa28-6753-4740-b75c-188bc7b2a993
+
+---
+
+## Summary Confirmation Recorded
+**Timestamp**: 2026-09-14T14:36:14Z
+**Event**: SUMMARY_CONFIRMATION_RECORDED
+**Stage**: deployment-pipeline
+**Details**: Looks correct
+**Checkpoint**: Consolidated Summary Confirmation
+**Questions File**: aidlc/spaces/default/intents/260913-preview-changed-error/operation/deployment-pipeline/deployment-pipeline-questions.md
+**Questions SHA-256**: eb6376afd5e8e43b8a1f4b8d216eb381fecf906d7d4b4999b6e5a709d1690be2
+**Hash Scope**: confirmed-content-v1
+**Summary Authorization Id**: d14460f07a07ee4fec6e387a3bb1839c5960849133e40490fccad61bc3ca11bf
+
+---
+
+## Artifact Created
+**Timestamp**: 2026-09-14T14:36:32Z
+**Event**: ARTIFACT_CREATED
+**Tool**: Write
+**File**: <project-dir>/aidlc/spaces/default/intents/260913-preview-changed-error/operation/deployment-pipeline/cd-config.md
+**Context**: operation > deployment-pipeline > cd-config.md
+**Summary Authorization Id**: d14460f07a07ee4fec6e387a3bb1839c5960849133e40490fccad61bc3ca11bf
+
+---
+
+## Artifact Created
+**Timestamp**: 2026-09-14T14:36:33Z
+**Event**: ARTIFACT_CREATED
+**Tool**: Write
+**File**: <project-dir>/aidlc/spaces/default/intents/260913-preview-changed-error/operation/deployment-pipeline/deployment-strategy.md
+**Context**: operation > deployment-pipeline > deployment-strategy.md
+**Summary Authorization Id**: d14460f07a07ee4fec6e387a3bb1839c5960849133e40490fccad61bc3ca11bf
+
+---
+
+## Artifact Created
+**Timestamp**: 2026-09-14T14:36:34Z
+**Event**: ARTIFACT_CREATED
+**Tool**: Write
+**File**: <project-dir>/aidlc/spaces/default/intents/260913-preview-changed-error/operation/deployment-pipeline/rollback-runbook.md
+**Context**: operation > deployment-pipeline > rollback-runbook.md
+**Summary Authorization Id**: d14460f07a07ee4fec6e387a3bb1839c5960849133e40490fccad61bc3ca11bf
+
+---
+
+## Artifact Updated
+**Timestamp**: 2026-09-14T14:36:35Z
+**Event**: ARTIFACT_UPDATED
+**Tool**: Write
+**File**: <project-dir>/aidlc/spaces/default/intents/260913-preview-changed-error/operation/deployment-pipeline/deployment-pipeline-questions.md
+**Context**: operation > deployment-pipeline > deployment-pipeline-questions.md
+**Summary Authorization Id**: d14460f07a07ee4fec6e387a3bb1839c5960849133e40490fccad61bc3ca11bf
+
+---
+
+## Decision Recorded
+**Timestamp**: 2026-09-14T14:36:48Z
+**Event**: DECISION_RECORDED
+**Stage**: deployment-pipeline
+**Decision**: 次回のために記録しておきたい学びはありますか？
+**Options**: なし,追加する
+
+---
+
+## Human Turn
+**Timestamp**: 2026-09-14T14:37:09Z
+**Event**: HUMAN_TURN
+**Session**: sess_0142fa28-6753-4740-b75c-188bc7b2a993
+
+---
+
+## Question Answered
+**Timestamp**: 2026-09-14T14:37:17Z
+**Event**: QUESTION_ANSWERED
+**Stage**: deployment-pipeline
+**Details**: なし
+
+---
+
+## Stage Awaiting Approval
+**Timestamp**: 2026-09-14T14:37:27Z
+**Event**: STAGE_AWAITING_APPROVAL
+**Stage**: deployment-pipeline
+
+---
+
+## Human Turn
+**Timestamp**: 2026-09-14T14:38:22Z
+**Event**: HUMAN_TURN
+**Session**: sess_0142fa28-6753-4740-b75c-188bc7b2a993
+
+---
+
+## Gate Approved
+**Timestamp**: 2026-09-14T14:38:30Z
+**Event**: GATE_APPROVED
+**Stage**: deployment-pipeline
+**User Input**: Approve
+
+---
+
+## Stage Completion
+**Timestamp**: 2026-09-14T14:38:30Z
+**Event**: STAGE_COMPLETED
+**Stage**: deployment-pipeline
+**Validation Basis**: {"graphContract":"sha256:df6962deab365ec2f79f186c672b0f382b3fff1ebf396ae0771425695c8f11eb","inputs":[{"artifact":"ci-config","contentHash":"sha256:a0f8121454f23919ec67377806bc4cb6419257cf15a76f2c7f653eec9aa4bf96","instanceCount":1,"presentCount":0,"producer":"ci-pipeline","required":true,"structureHash":"sha256:23ce293aecf8506b34fddbc947feda1d1a87490f13abb3c5c273c19d191cfa50"},{"artifact":"cicd-pipeline","contentHash":"sha256:6ee3eced40aa394da031df5a3eec5deed016e68d11db4011a68aef673558b983","instanceCount":1,"presentCount":0,"producer":"infrastructure-design","required":true,"structureHash":"sha256:d8d7aca6889f9e12ba710fa36750151e8a4a2a7d0f5d290d632ebe41fd5207fc"},{"artifact":"infrastructure-specification","contentHash":"sha256:7eced86fbfb9d107084471c28fd3f5e70d85c70da4c77d3a351a3be0b15cd2b0","instanceCount":1,"presentCount":0,"producer":"infrastructure-design","required":true,"structureHash":"sha256:3284dd5bf3d5f0aae7b87cb29e99e4b75ba937205736cd8c1955c1afecee87b4"},{"artifact":"quality-gates","contentHash":"sha256:6733c5e224cbbf9ff71d0c5a32740920059a94131d8f736c43c506bd371bb8cc","instanceCount":1,"presentCount":0,"producer":"ci-pipeline","required":true,"structureHash":"sha256:642eef2aba17a5a64483e6e1d9063131b482d859e9acf8b11a4a9c06ae7c8675"}],"outputs":[{"artifact":"cd-config","contentHash":"sha256:dc582b3d45cb777410926d68b48e5fa6f93c8b3b9e82e5f26927cea673096247","instanceCount":1,"presentCount":1,"producer":"deployment-pipeline","required":true,"structureHash":"sha256:dd12b5fc15b97b64ad33d63a0a940922997fafd10d7e5b16e8edba56ed361a60"},{"artifact":"deployment-pipeline-questions","contentHash":"sha256:318ba324d45dc025a7330cab6974478300ebe7287741dab9369f225b6ed9165c","instanceCount":1,"presentCount":1,"producer":"deployment-pipeline","required":true,"structureHash":"sha256:c01d10b74c0c45c7e25835b26adca669673643eaacd13659e56c4cc355e5e1a3"},{"artifact":"deployment-strategy","contentHash":"sha256:11c704b3dd96c6c83f48c7fd6bcfc0d4428a2ebb9607e018c5532c5a62f86ecd","instanceCount":1,"presentCount":1,"producer":"deployment-pipeline","required":true,"structureHash":"sha256:e9b7bdf6ffb42c44e2ca6df36a63ce95555f54348e28ffe4451a3533040f3946"},{"artifact":"rollback-runbook","contentHash":"sha256:21ec1334d02dd82fac0a78eb9512df551713f078ef1cafd281552abf198b789c","instanceCount":1,"presentCount":1,"producer":"deployment-pipeline","required":true,"structureHash":"sha256:bee4d28731dcfe71b33b43ff6f56b0146499b1b0e9a124774e4dcac9b41af565"}],"projectType":"brownfield","schema":3}
+**Details**: Stage Deployment Pipeline approved by gate
+
+---
+
+## Stage Start
+**Timestamp**: 2026-09-14T14:38:30Z
+**Event**: STAGE_STARTED
+**Stage**: deployment-execution
+**Agent**: aidlc-pipeline-deploy-agent
+
+---
