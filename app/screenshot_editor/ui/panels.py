@@ -58,7 +58,11 @@ class AdjustmentPanel(QWidget):
             ("denoise", "ノイズ除去"),
         ):
             slider = _make_slider(f"slider-{key}")
-            slider.valueChanged.connect(self.changed.emit)
+            # QSlider.valueChanged は int を伴って発火する。引数なしの
+            # `changed = Signal()` へ直結すると PySide6 が余分な位置引数を
+            # emit へ渡してシグネチャ不一致エラーになる。引数を捨てるスロットで
+            # 包み、changed を引数なしで発火させる。
+            slider.valueChanged.connect(lambda *_: self.changed.emit())
             self._sliders[key] = slider
             layout.addRow(QLabel(label), slider)
 
@@ -90,7 +94,10 @@ class PresetPanel(QWidget):
         self._combo.addItem("（なし）", userData=None)
         for name in presets.preset_names():
             self._combo.addItem(name, userData=name)
-        self._combo.currentIndexChanged.connect(self.changed.emit)
+        # QComboBox.currentIndexChanged は int を伴って発火する。引数なしの
+        # `changed = Signal()` へ直結するとシグネチャ不一致エラーになるため、
+        # 引数を捨てるスロットで包んで changed を引数なしで発火させる。
+        self._combo.currentIndexChanged.connect(lambda *_: self.changed.emit())
         layout.addWidget(self._combo)
         layout.addStretch(1)
 

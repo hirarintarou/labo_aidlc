@@ -1,0 +1,8 @@
+{
+  "stage": "code-generation",
+  "version": 1,
+  "writes": [
+    { "path": "app/screenshot_editor/ui/panels.py" },
+    { "path": "app/tests/test_ui_panels.py" }
+  ]
+}
